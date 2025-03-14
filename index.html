@@ -7,62 +7,62 @@
     <style>
         body {
             font-family: 'Helvetica Neue', Arial, sans-serif;
-            line-height: 1.45; /* Further reduced */
+            line-height: 1.4; /* Further reduced */
             margin: 0;
             padding: 0;
             color: #333;
             background-color: #f9f9f9;
-            font-size: 13.5px; /* Slightly more reduced */
+            font-size: 13px; /* Further reduced */
         }
         
         .container {
             max-width: 800px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 15px;
             background-color: white;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
         }
         
         .header {
             text-align: center;
-            margin-bottom: 22px; /* Further reduced */
-            padding-bottom: 12px; /* Further reduced */
+            margin-bottom: 18px; /* Further reduced */
+            padding-bottom: 10px; /* Further reduced */
             border-bottom: 1px solid #eee;
         }
         
         .logo {
-            max-width: 120px; /* Further reduced */
-            margin: 0 auto 12px; /* Further reduced */
+            max-width: 100px; /* Further reduced */
+            margin: 0 auto 10px; /* Further reduced */
             display: block;
         }
         
         h1 {
-            font-size: 24px;
+            font-size: 22px; /* Further reduced */
             margin-top: 0;
-            margin-bottom: 12px;
+            margin-bottom: 10px;
             color: #222;
             text-transform: uppercase;
             letter-spacing: 1px;
         }
         
         h2 {
-            font-size: 17px; /* Further reduced */
-            margin-top: 22px; /* Further reduced */
-            margin-bottom: 10px;
-            padding-bottom: 5px; /* Further reduced */
+            font-size: 16px; /* Further reduced */
+            margin-top: 18px; /* Further reduced */
+            margin-bottom: 8px;
+            padding-bottom: 4px; /* Further reduced */
             border-bottom: 1px solid #ddd;
             color: #444;
         }
         
         h3 {
-            font-size: 15px; /* Further reduced */
+            font-size: 14px; /* Further reduced */
             color: #555;
-            margin-top: 14px; /* Further reduced */
-            margin-bottom: 8px; /* Further reduced */
+            margin-top: 12px; /* Further reduced */
+            margin-bottom: 6px; /* Further reduced */
         }
         
         section {
-            margin-bottom: 20px; /* Further reduced */
+            margin-bottom: 16px; /* Further reduced */
         }
         
         strong {
@@ -70,20 +70,21 @@
         }
         
         ul {
-            padding-left: 16px; /* Further reduced */
-            margin-top: 6px; /* Further reduced */
-            margin-bottom: 10px; /* Further reduced */
+            padding-left: 15px; /* Further reduced */
+            margin-top: 5px; /* Further reduced */
+            margin-bottom: 8px; /* Further reduced */
         }
         
         li {
-            margin-bottom: 6px; /* Further reduced */
+            margin-bottom: 5px; /* Further reduced */
         }
         
-        /* Force the signatures on same page and provide more space */
+        /* SIGNIFICANTLY more space for signatures */
         .signature-section {
             page-break-inside: avoid;
-            margin-top: 30px; /* Reduced */
+            margin-top: 25px; /* Reduced top margin */
             margin-bottom: 20px;
+            padding-top: 15px; /* Added padding */
         }
         
         .signatures {
@@ -95,41 +96,43 @@
             width: 45%;
         }
         
+        /* Much larger signature area */
         .signature-line {
             border-top: 1px solid #000;
-            padding-top: 6px; /* Reduced */
-            margin-top: 60px; /* INCREASED for more signature space */
+            padding-top: 5px;
+            margin-top: 100px; /* MUCH larger signature space */
         }
         
         .signature-name {
-            margin-top: 10px; /* Added specific space for name */
-            margin-bottom: 15px; /* Added space between name and date */
+            margin-top: 15px; /* More space between signature and name */
+            margin-bottom: 25px; /* More space between name and date */
         }
         
         .date-line {
             border-top: 1px solid #000;
-            padding-top: 6px; /* Reduced */
-            margin-top: 35px; /* INCREASED for more date space */
+            padding-top: 5px;
+            margin-top: 60px; /* Much more space for date */
+            margin-bottom: 10px; /* Space after date line */
         }
         
         .footer {
-            margin-top: 30px; /* Reduced */
+            margin-top: 25px; /* Reduced */
             text-align: center;
             font-size: 10px; /* Further reduced */
             color: #777;
             border-top: 1px solid #eee;
-            padding-top: 12px; /* Reduced */
+            padding-top: 10px; /* Reduced */
         }
         
         /* Reduce spacing to ensure signatures fit on one page */
         .compact-section {
-            margin-bottom: 10px; /* Further reduced */
+            margin-bottom: 8px; /* Further reduced */
         }
         
         /* Make nested lists more compact */
         ul ul {
-            margin-top: 4px;
-            margin-bottom: 6px;
+            margin-top: 3px;
+            margin-bottom: 5px;
         }
         
         /* Print-specific styles */
@@ -142,11 +145,7 @@
                 box-shadow: none;
                 margin: 0;
                 max-width: none;
-                padding: 12px; /* Reduced */
-            }
-            
-            .page-break {
-                page-break-before: always;
+                padding: 10px; /* Reduced */
             }
             
             /* Ensure signature section stays on one page */
@@ -246,7 +245,7 @@
             </ul>
         </section>
         
-        <!-- Force this section to stay together on one page with MORE space for signatures -->
+        <!-- Force this section to stay together on one page with MUCH MORE space for signatures -->
         <div class="signature-section">
             <div class="signatures">
                 <div class="signature-block">
