@@ -7,12 +7,12 @@
     <style>
         body {
             font-family: 'Helvetica Neue', Arial, sans-serif;
-            line-height: 1.5; /* Reduced from 1.6 */
+            line-height: 1.45; /* Further reduced */
             margin: 0;
             padding: 0;
             color: #333;
             background-color: #f9f9f9;
-            font-size: 14px; /* Slightly reduced from default */
+            font-size: 13.5px; /* Slightly more reduced */
         }
         
         .container {
@@ -25,44 +25,44 @@
         
         .header {
             text-align: center;
-            margin-bottom: 25px; /* Reduced from 30px */
-            padding-bottom: 15px; /* Reduced from 20px */
+            margin-bottom: 22px; /* Further reduced */
+            padding-bottom: 12px; /* Further reduced */
             border-bottom: 1px solid #eee;
         }
         
         .logo {
-            max-width: 130px; /* Reduced from 150px */
-            margin: 0 auto 15px; /* Reduced from 20px */
+            max-width: 120px; /* Further reduced */
+            margin: 0 auto 12px; /* Further reduced */
             display: block;
         }
         
         h1 {
-            font-size: 24px; /* Reduced from 28px */
+            font-size: 24px;
             margin-top: 0;
-            margin-bottom: 15px; /* Added explicit bottom margin */
+            margin-bottom: 12px;
             color: #222;
             text-transform: uppercase;
             letter-spacing: 1px;
         }
         
         h2 {
-            font-size: 18px; /* Reduced from 20px */
-            margin-top: 25px; /* Reduced from 30px */
-            margin-bottom: 12px; /* Added explicit bottom margin */
-            padding-bottom: 6px; /* Reduced from 8px */
+            font-size: 17px; /* Further reduced */
+            margin-top: 22px; /* Further reduced */
+            margin-bottom: 10px;
+            padding-bottom: 5px; /* Further reduced */
             border-bottom: 1px solid #ddd;
             color: #444;
         }
         
         h3 {
-            font-size: 16px; /* Reduced from 18px */
+            font-size: 15px; /* Further reduced */
             color: #555;
-            margin-top: 16px; /* Reduced from 20px */
-            margin-bottom: 10px; /* Added explicit bottom margin */
+            margin-top: 14px; /* Further reduced */
+            margin-bottom: 8px; /* Further reduced */
         }
         
         section {
-            margin-bottom: 24px; /* Reduced from 30px */
+            margin-bottom: 20px; /* Further reduced */
         }
         
         strong {
@@ -70,19 +70,20 @@
         }
         
         ul {
-            padding-left: 18px; /* Reduced from 20px */
-            margin-top: 8px; /* Added explicit top margin */
-            margin-bottom: 12px; /* Added explicit bottom margin */
+            padding-left: 16px; /* Further reduced */
+            margin-top: 6px; /* Further reduced */
+            margin-bottom: 10px; /* Further reduced */
         }
         
         li {
-            margin-bottom: 8px; /* Reduced from 10px */
+            margin-bottom: 6px; /* Further reduced */
         }
         
-        /* Force the signatures on same page */
+        /* Force the signatures on same page and provide more space */
         .signature-section {
             page-break-inside: avoid;
-            margin-top: 40px; /* Reduced from 50px */
+            margin-top: 30px; /* Reduced */
+            margin-bottom: 20px;
         }
         
         .signatures {
@@ -96,28 +97,39 @@
         
         .signature-line {
             border-top: 1px solid #000;
-            padding-top: 8px; /* Reduced from 10px */
-            margin-top: 35px; /* Reduced from 40px */
+            padding-top: 6px; /* Reduced */
+            margin-top: 60px; /* INCREASED for more signature space */
+        }
+        
+        .signature-name {
+            margin-top: 10px; /* Added specific space for name */
+            margin-bottom: 15px; /* Added space between name and date */
         }
         
         .date-line {
             border-top: 1px solid #000;
-            padding-top: 8px; /* Reduced from 10px */
-            margin-top: 25px; /* Reduced from 30px */
+            padding-top: 6px; /* Reduced */
+            margin-top: 35px; /* INCREASED for more date space */
         }
         
         .footer {
-            margin-top: 40px; /* Reduced from 50px */
+            margin-top: 30px; /* Reduced */
             text-align: center;
-            font-size: 11px; /* Reduced from 12px */
+            font-size: 10px; /* Further reduced */
             color: #777;
             border-top: 1px solid #eee;
-            padding-top: 15px; /* Reduced from 20px */
+            padding-top: 12px; /* Reduced */
         }
         
         /* Reduce spacing to ensure signatures fit on one page */
         .compact-section {
-            margin-bottom: 12px; /* Reduced from 15px */
+            margin-bottom: 10px; /* Further reduced */
+        }
+        
+        /* Make nested lists more compact */
+        ul ul {
+            margin-top: 4px;
+            margin-bottom: 6px;
         }
         
         /* Print-specific styles */
@@ -130,7 +142,7 @@
                 box-shadow: none;
                 margin: 0;
                 max-width: none;
-                padding: 15px; /* Reduced padding for print */
+                padding: 12px; /* Reduced */
             }
             
             .page-break {
@@ -234,20 +246,20 @@
             </ul>
         </section>
         
-        <!-- Force this section to stay together on one page -->
+        <!-- Force this section to stay together on one page with MORE space for signatures -->
         <div class="signature-section">
             <div class="signatures">
                 <div class="signature-block">
                     <h3>Investor:</h3>
                     <div class="signature-line">Signature</div>
-                    <p>Printed Name: ______________________</p>
+                    <p class="signature-name">Printed Name: ______________________</p>
                     <div class="date-line">Date</div>
                 </div>
                 
                 <div class="signature-block">
                     <h3>Red Fox Features LLC:</h3>
                     <div class="signature-line">Signature</div>
-                    <p>Printed Name: ______________________</p>
+                    <p class="signature-name">Printed Name: ______________________</p>
                     <p>Title: ______________________</p>
                     <div class="date-line">Date</div>
                 </div>
