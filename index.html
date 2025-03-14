@@ -30,7 +30,7 @@
         }
         
         .logo {
-            max-width: 200px;
+            max-width: 150px;
             margin: 0 auto 20px;
             display: block;
         }
@@ -73,8 +73,13 @@
             margin-bottom: 10px;
         }
         
+        /* Force the signatures on same page */
+        .signature-section {
+            page-break-inside: avoid;
+            margin-top: 50px;
+        }
+        
         .signatures {
-            margin-top: 60px;
             display: flex;
             justify-content: space-between;
         }
@@ -84,15 +89,15 @@
         }
         
         .signature-line {
-            margin-top: 60px;
             border-top: 1px solid #000;
             padding-top: 10px;
+            margin-top: 40px;
         }
         
         .date-line {
-            margin-top: 30px;
             border-top: 1px solid #000;
             padding-top: 10px;
+            margin-top: 30px;
         }
         
         .footer {
@@ -102,6 +107,11 @@
             color: #777;
             border-top: 1px solid #eee;
             padding-top: 20px;
+        }
+        
+        /* Reduce spacing to ensure signatures fit on one page */
+        .compact-section {
+            margin-bottom: 15px;
         }
         
         /* Print-specific styles */
@@ -119,6 +129,12 @@
             .page-break {
                 page-break-before: always;
             }
+            
+            /* Ensure signature section stays on one page */
+            .signature-section {
+                page-break-before: auto;
+                page-break-after: avoid;
+            }
         }
     </style>
 </head>
@@ -126,7 +142,7 @@
     <div class="container">
         <div class="header">
             <img src="https://raw.githubusercontent.com/mikecerisano/Investor/refs/heads/main/IMG_0069.png" alt="Red Fox Features Logo" class="logo">
-            <h1>MIMIC Investor Agreement</h1>
+            <h1>MIMIC INVESTOR AGREEMENT</h1>
         </div>
         
         <section>
@@ -178,7 +194,7 @@
             </ul>
         </section>
         
-        <section>
+        <section class="compact-section">
             <h2>4. Legal Terms & Dispute Resolution</h2>
             
             <h3>4.1 No Guaranteed Returns</h3>
@@ -204,27 +220,30 @@
             </ul>
         </section>
         
-        <section>
+        <section class="compact-section">
             <h2>5. Payment Terms</h2>
             <ul>
                 <li><strong>5.1</strong> The <strong>$15,000</strong> investment is <strong>due upon signing</strong> of this agreement and must be transferred via <strong>ACH, wire transfer</strong>, or another <strong>mutually agreed-upon method</strong> to the designated <strong>Red Fox Features LLC</strong> business account.</li>
             </ul>
         </section>
         
-        <div class="signatures">
-            <div class="signature-block">
-                <h3>Investor:</h3>
-                <div class="signature-line">Signature</div>
-                <p>Printed Name: ______________________</p>
-                <div class="date-line">Date</div>
-            </div>
-            
-            <div class="signature-block">
-                <h3>Red Fox Features LLC:</h3>
-                <div class="signature-line">Signature</div>
-                <p>Printed Name: ______________________</p>
-                <p>Title: ______________________</p>
-                <div class="date-line">Date</div>
+        <!-- Force this section to stay together on one page -->
+        <div class="signature-section">
+            <div class="signatures">
+                <div class="signature-block">
+                    <h3>Investor:</h3>
+                    <div class="signature-line">Signature</div>
+                    <p>Printed Name: ______________________</p>
+                    <div class="date-line">Date</div>
+                </div>
+                
+                <div class="signature-block">
+                    <h3>Red Fox Features LLC:</h3>
+                    <div class="signature-line">Signature</div>
+                    <p>Printed Name: ______________________</p>
+                    <p>Title: ______________________</p>
+                    <div class="date-line">Date</div>
+                </div>
             </div>
         </div>
         
